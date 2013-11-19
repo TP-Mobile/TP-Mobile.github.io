@@ -1,46 +1,48 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title:
+tagline:
 ---
-{% include JB/setup %}
+<div class="row">
+    {% for post in site.posts limit:3 %}
+    <div class="span4">
+        <div class="index-post-title">
+            <a href="{{ BASE_PATH }}{{ post.url }}"><h2>{{ post.title }}</h2></a>
+        </div>
+        <hr />
+        <p>{% if post.thumbnail %}</p>
+        <img src="{{ post.thumbnail }}" style="height: 280px;" align="center"/>
+        {% else %}
+        <img src="/images/nothumbnail.png" style="height: 280px;" align="center"/>
+        {% endif %}
+        <p>&nbsp;</p>
+        <div>
+            {{ post.content | strip_html | truncatewords:20 }}
+        </div>
+        <p>
+            <a class="btn" href="{{ BASE_PATH }}{{ post.url }}">阅读全文...</a>
+        </p>
+    </div>
+    {% endfor %}
+</div>
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
-
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
-
-
+{% for post in site.posts limit:15 offset:3 %}
+<hr />
+<div class="row">
+    <div class="span2">
+        {% if post.thumbnail %}
+            <img src="{{ post.thumbnail }}" align="center" />
+        {% else %}
+            <img src="/images/nothumbnail.png" align="center"/>
+        {% endif %}
+    </div>
+    <div class="span10">
+        <p>
+            <a href="{{ BASE_PATH }}{{ post.url }}">
+                <h3>{{ post.title }}</h3>
+            </a>
+        </p>
+        <p>{{ post.content | strip_html | truncatewords:40 }}</p>
+    </div>
+</div>
+{% endfor %}
