@@ -12,9 +12,13 @@ tagline:
                 </a>
             </div>
             <p>{% if post.thumbnail %}</p>
-            <img src="{{ post.thumbnail }}" style="height: 280px;" align="center"/>
+            <div class="thumbnail-wrapper">
+                <img src="{{ post.thumbnail }}" />
+            </div>
             {% else %}
-                <img src="/images/nothumbnail.jpg" align="center"/>
+            <div class="thumbnail-wrapper">
+                <img src="/images/nothumbnail.jpg" />
+            </div>
             {% endif %}
             <p>&nbsp;</p>
             <div class="brief-content">
@@ -33,9 +37,13 @@ tagline:
     <div class="row content-row">
         <div class="span2">
             {% if post.thumbnail %}
-            <img src="{{ post.thumbnail }}" align="center" />
+            <div class="thumbnail-wrapper-mini">
+                <img src="{{ post.thumbnail }}" />
+            </div>
             {% else %}
-            <img src="/images/nothumbnail.jpg" align="center"/>
+            <div class="thumbnail-wrapper-mini">
+                <img src="/images/nothumbnail.jpg" />
+            </div>
             {% endif %}
         </div>
         <div class="span10">
@@ -56,13 +64,12 @@ tagline:
             {% for cat in site.categories %}
             <ul>
                 <li class="column-list-item">
-                    <a href="/category.html">{{ cat[0] }}</a>
+                    <a href="/categories.html">{{ cat[0] }}</a>
                 </li>
             </ul>
             {% endfor %}
         </div>
     </div>
-
     <div class="index-sidebar">
         <div class="sidebar-title">标签分类</div>
         <div class="column-sidebar">

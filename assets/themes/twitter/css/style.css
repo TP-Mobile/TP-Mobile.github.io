@@ -3,9 +3,20 @@
     margin: 0 auto;
     max-width: 900px;
 }
+.container-narrow-orig { width: 700px; }
 .container-narrow > hr { margin: 30px 0; }
 .navbar .nav { float: right; }
 
+/* ==thumbnails== */
+.thumbnail-wrapper { height: 160px; }
+.thumbnail-wrapper-mini { height: 80px; }
+.thumbnail-wrapper img,
+.thumbnail-wrapper-mini img {
+    height: 100%;
+    /*horizontal align the img*/
+    display: block;
+    margin: auto;
+}
 /* ==Custom== index */
 .brief-content {
     height: 60px;
@@ -16,7 +27,6 @@
     padding-bottom: 5px;
 }
 .content-row { max-height: 120px; }
-
 /* ==Custom== siderbar */
 .index-sidebar {
     border: 1px solid #eee;
@@ -68,11 +78,7 @@ h3 {
     color: #393939;
     font-size: 1.1em;
 }
-.index-title { font-size: 130%; }
-.sidebar-title {
-
-}
-
+.index-title { font-size: 130%; font-weight: 600; }
 
 ul { list-style-type: none; }
 ul.posts {
