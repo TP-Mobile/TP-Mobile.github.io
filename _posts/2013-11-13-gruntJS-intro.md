@@ -3,6 +3,7 @@ layout: post
 title: "GruntJS介绍"
 description: ""
 category: "web"
+thumbnail: "/images/thumbnail/gruntjs.jpg"
 tags: ['web前端', '技术分享', '项目文档']
 ---
 {% include JB/setup %}

@@ -3,7 +3,7 @@ layout: post
 title: "测试基础培训"
 description: ""
 thumbnail: "/images/thumbnail/test.jpg"
-category:
+category: "web"
 tags: ["测试相关", "技术讲座"]
 ---
 {% include JB/setup %}
