@@ -19,9 +19,14 @@ tags: ["web前端"]
         $ git clone https://github.com/rubygems/rubygems.git
         $ cd rubygems
         $ sudo ruby setup.rb
-3. 安装`jekyll`： `$ sudo gem install jekyll --no-rdoc --no-ri`
-4. 安装`rake`. 类似_GNU make_的工具：`$ sudo gem install rake`
-5. 安装`rdiscount`, _Markdown_解析器：`$ sudo gem install rdiscount`
+3. 查看及配置gem源：
+        $ gem sources
+        内网环境无法使用https连接，如果gem源为https，使用http协议
+        $ sudo gem sources --remove https://rubygems.org
+        $ sudo gem sources -a http://rubygems.org
+4. 安装`jekyll`： `$ sudo gem install jekyll --no-rdoc --no-ri`
+5. 安装`rake`. 类似_GNU make_的工具：`$ sudo gem install rake`
+6. 安装`rdiscount`, _Markdown_解析器：`$ sudo gem install rdiscount`
 
 ## Jekyll介绍
 > _TBA, Googling yourself..._
