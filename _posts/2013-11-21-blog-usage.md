@@ -20,8 +20,9 @@ tags: ["web前端"]
         $ cd rubygems
         $ sudo ruby setup.rb
 3. 查看及配置gem源：
+
         $ gem sources
-        内网环境无法使用https连接，如果gem源为https，使用http协议
+        # 内网环境无法使用https连接，如果gem源为https，使用http协议
         $ sudo gem sources --remove https://rubygems.org
         $ sudo gem sources -a http://rubygems.org
 4. 安装`jekyll`： `$ sudo gem install jekyll --no-rdoc --no-ri`
