@@ -13,11 +13,13 @@ tags: ["web前端"]
 
         $ sudo apt-get install ruby1.9.1 ruby1.9.1-dev
         $ sudo apt-get install libssl-dev
-2. 安装`rubygems`:  `sudo apt-get install rubygems`
->若安装失败，请在Github上拉取rubygems源码，编译并安装
+2. 安装`rubygems`:
+>拉取rubygems源码，编译并安装
 
         $ git clone https://github.com/rubygems/rubygems.git
         $ cd rubygems
+        # 切换到v2.0.3发布Tag
+        $ git checkout v2.0.3
         $ sudo ruby setup.rb
 3. 查看及配置gem源：
 
